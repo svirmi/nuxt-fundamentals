@@ -13,7 +13,10 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    ],
+    htmlAttrs: {
+      lang: 'en',
+    },
   },
   /*
   ** Customize the progress-bar color

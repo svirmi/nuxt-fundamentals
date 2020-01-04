@@ -33,6 +33,15 @@ export default {
     posts() {
       return this.$store.state.posts.all
     }
+  },
+  head() {
+    return {
+      title: 'Home Page',
+      meta: [
+        {name: 'twitter:title', content: 'Nuxt.js fundamentals'},
+        {name: 'twitter:description', content: 'Nuxt.js fundamentals'},
+      ]
+    }
   }
 }
 </script>

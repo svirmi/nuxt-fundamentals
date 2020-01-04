@@ -33,6 +33,15 @@
         relatedPosts() {
           return this.$store.state.posts.all.filter(post => post.id !== this.id)
         }
+      },
+      head() {
+        return {
+          title: this.post.title,
+          meta: [
+            {name: 'twitter:title', content: this.post.title},
+            {name: 'twitter:description', content: this.post.content},
+          ]
+        }
       }
     }
 </script>
