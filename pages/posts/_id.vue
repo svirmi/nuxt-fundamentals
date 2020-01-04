@@ -10,7 +10,7 @@
     <h3>Posts you might alos like:</h3>
     <ul>
       <li v-for="related in relatedPosts">
-        <a :href="`/posts/${related.id}`">{{related.title}}</a>
+        <nuxt-link :to="`/posts/${related.id}`">{{related.title}}</nuxt-link>
       </li>
     </ul>
   </aside>
