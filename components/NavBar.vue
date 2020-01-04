@@ -1,11 +1,9 @@
 <template>
 <nav class="nav">
   <div class="logo">
-    <a href="" class="logo text-lg">
-      Nuxt basis
-    </a>
+      <nuxt-link class="logo text-lg" :to="{name: 'index'}">Nuxt basis</nuxt-link>
 
-    <span class="subheader">Some text here</span>
+      <span class="subheader">Some text here</span>
   </div>
 </nav>
 </template>
