@@ -1,9 +1,20 @@
 <template>
 <div class="container">
+
   <article>
     <h1 class="title">{{post.title}}</h1>
     <p>{{post.content}}</p>
   </article>
+
+  <aside>
+    <h3>Posts you might alos like:</h3>
+    <ul>
+      <li v-for="related in relatedPosts">
+        <a :href="`/posts/${related.id}`">{{related.title}}</a>
+      </li>
+    </ul>
+  </aside>
+
 </div>
 </template>
 
@@ -29,6 +40,11 @@
               id: 'post-3',
               title: 'post 3 title',
               content: 'post 3 content',
+            },
+            {
+              id: 'four',
+              title: 'post 4 title',
+              content: 'post 4 content',
             }
           ]
         }
@@ -36,6 +52,9 @@
       computed: {
         post() {
           return this.posts.find(post => post.id === this.id)
+        },
+        relatedPosts() {
+          return this.posts.filter(post => post.id !== this.id)
         }
       }
     }
